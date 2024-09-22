@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-import { Button, Col, Form, Input, Row } from "antd";
+import { Col, Form, Input, Row } from "antd";
 import { useResendOTPMutation } from "@/redux/api/sclices/authSlice";
 
 const ResendOTP = () => {
@@ -19,7 +18,7 @@ const ResendOTP = () => {
     };
     return (
         <div className="flex items-center justify-center flex-col gap-4 min-h-screen bg-slate-300">
-            <h1 className="text-3xl">Enter email for code!</h1>
+            <h1 className="text-3xl">Enter code!</h1>
             <Form
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
@@ -41,9 +40,6 @@ const ResendOTP = () => {
                                     type="email"
                                 />
                             </Form.Item>
-                        </Col>
-                        <Col span={8}>
-                            <Button htmlType="submit">Resend</Button>
                         </Col>
                         <Link
                             to={"/"}

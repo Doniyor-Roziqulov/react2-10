@@ -35,9 +35,6 @@ export const cart = createSlice({
                     : item
             );
         },
-        // increment: (state,action) => {
-
-        // }
     },
 });
 

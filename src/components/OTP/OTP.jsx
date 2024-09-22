@@ -1,9 +1,8 @@
 import { useOtpVerifyRequestMutation } from "@/redux/api/sclices/authSlice";
-// import { Button, Input } from "antd";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
-import { Button, Checkbox, Form, Input, message } from "antd";
+import { Input, message } from "antd";
 
 const OTP = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -39,7 +38,7 @@ const OTP = () => {
     };
     return (
         <div className="flex items-center justify-center flex-col gap-4 min-h-screen bg-slate-300">
-            <h1 className="text-3xl">Confirm email OTP code!</h1>
+            <h1 className="text-3xl">O T P</h1>
             <Input.OTP length={6} {...sharedProps} />
 
             <div className="flex justify-between gap-7">

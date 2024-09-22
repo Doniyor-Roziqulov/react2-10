@@ -20,9 +20,31 @@ export const productApi = api.injectEndpoints({
             query: ({ id }) => ({
                 url: `/cars/${id}`,
             }),
+            providesTags: ["ProductApi"],
+        }),
+        createCar: build.mutation({
+            query: ({ body }) => ({
+                url: `/cars/create`,
+                method: "POST",
+                body,
+            }),
+            invalidatesTags: ["ProductApi"],
+        }),
+        updateCar: build.mutation({
+            query: ({ id, body }) => ({
+                url: `/cars/${id}`,
+                method: "PUT",
+                body,
+            }),
+            invalidatesTags: ["ProductApi"],
         }),
     }),
 });
 
-export const { useGetCategoriesQuery, useGetCarsQuery, useGetCarQuery } =
-    productApi;
+export const {
+    useGetCategoriesQuery,
+    useGetCarsQuery,
+    useGetCarQuery,
+    useCreateCarMutation,
+    useUpdateCarMutation,
+} = productApi;

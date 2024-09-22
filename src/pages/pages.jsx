@@ -14,22 +14,24 @@ import Wishlist from "./wishlist/Wishlist";
 
 const Pages = () => {
     return (
-        <>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route path="" element={<Home />} />
-                    <Route path="profile" element={<Profile />} />
-                    <Route path="car" element={<Car />} />
-                    <Route path="cart" element={<CartPage />} />
-                    <Route path="wishlist" element={<Wishlist />} />
-                </Route>
-                <Route path="/sign-up" element={<SignUp />} />
-                <Route path="/otp" element={<OTP />} />
-                <Route path="/resend-otp" element={<ResendOTP />} />
-                <Route path="/sign-in" element={<SignIn />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </>
+        <div className="bg-black">
+            <div className="container max-w-[1300px] mx-auto px-6">
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route path="" element={<Home />} />
+                        <Route path="profile" element={<Profile />} />
+                        <Route path="car" element={<Car />} />
+                        <Route path="cart" element={<CartPage />} />
+                        <Route path="wishlist" element={<Wishlist />} />
+                    </Route>
+                    <Route path="/sign-up" element={<SignUp />} />
+                    <Route path="/otp" element={<OTP />} />
+                    <Route path="/resend-otp" element={<ResendOTP />} />
+                    <Route path="/sign-in" element={<SignIn />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </div>
+        </div>
     );
 };
 
